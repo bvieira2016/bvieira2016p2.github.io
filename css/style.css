@@ -1,0 +1,967 @@
+/*************/
+/****index****/
+/*************/
+/*background*/
+	body.home{
+		background-color: #222222;
+		background-image: url(../img/cin1.jpg);
+		background-repeat: none;
+		padding: 1em;
+	}
+/*nav*/
+@media screen and (min-width: 320px){
+	.navButton {
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100%;
+		z-index: 1001;
+		padding: .5em;
+		background-color: #333;
+		border: solid #aaa;
+		border-width: 0 0 1px;
+		font-family: 'PT Serif', serif;
+	}
+	.navButton a {
+		color: #eee;
+		text-decoration: none;
+		padding: 0 0 0 .5em;
+		font-family: 'PT Serif', serif;
+	}
+	i {
+ 		font-size: 1em;
+ 		color: #eee;
+ 		padding: 0 1em 0 0;
+ 		transition: color .5s;
+ 	}
+	i:hover {
+ 		color: #333;
+ 	}
+	#nav {
+ 		position: fixed;
+ 		top: 2em;
+ 		left: -72%;
+ 		width: 72%;
+ 		margin: 0;
+ 		height: 100%;
+ 		background-color: #333;
+ 		background-color: rgba(0,0,0,.84);
+ 		transition: left .5s;
+	}
+	#nav:target {
+		left: 0;
+	}
+	nav {
+		z-index: 1000;
+	}
+	nav ul {
+		margin: 0;
+		padding: 0;
+		margin-top: .5em;
+	}
+	nav li {
+		list-style: none;
+		margin: 0;
+		padding: 0;	
+	}
+	nav li a {
+		color: #FF1177;
+		text-decoration: none;
+		display: block;
+		padding: .5em 1em;
+		transition: all .5s;
+	}
+	nav li a:hover {
+		color: #eee;
+		text-decoration: none;
+		background-color: #eee;
+		color: #333;
+	}
+	.hiddenLink {
+		display: block;
+	}
+@media only screen and (min-width: 961px) {
+	.navButton {
+		display: none;
+	}
+	#nav {
+	 	width: 100%;
+	 	height: auto;
+	 	position: static;
+	}
+	nav {
+		margin: 0;
+		font-size: 1.5em;
+	}
+	nav ul {
+		text-align: center;
+	}
+	nav li {
+		display: inline;
+	}
+	nav li a {
+		display: inline-block;
+	}
+	.hiddenLink {
+		display: none;
+	}
+}
+/*logo*/
+@media screen and (min-width: 320px){
+	#container {
+  		width: 500px;
+  		margin: auto;
+	}
+	/*Neon*/
+	p {
+  		text-align: center;
+  		font-size: 5em;
+  		margin: 20px 0 20px 0;
+	}
+	a {
+  		text-decoration: none;
+        -webkit-transition: all 0.5s;
+        -moz-transition: all 0.5s;
+  		transition: all 0.5s;
+	}
+	p:nth-child(1) a {
+  		color: #fff;
+  		font-family: 'Dancing Script', cursive;
+        -webkit-animation: neon1 1.5s ease-in-out infinite alternate;
+        -moz-animation: neon1 1.5s ease-in-out infinite alternate;
+  		animation: neon1 1.5s ease-in-out infinite alternate;
+	}
+	p:nth-child(1) a:hover {
+  		color: #FF1177;
+        -webkit-animation: neon1 1.5s ease-in-out infinite alternate;
+        -moz-animation: neon1 1.5s ease-in-out infinite alternate;
+  		animation: none;
+	}
+	@-webkit-keyframes neon1 {
+  	from {
+    	text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #FF1177, 0 0 70px #FF1177, 0 0 80px #FF1177, 0 0 100px #FF1177, 0 0 150px #FF1177;
+  	}
+  	to {
+    	text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #FF1177, 0 0 35px #FF1177, 0 0 40px #FF1177, 0 0 50px #FF1177, 0 0 75px #FF1177;
+  	}
+	}
+	@-moz-keyframes neon1 {
+  	from {
+    	text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #FF1177, 0 0 70px #FF1177, 0 0 80px #FF1177, 0 0 100px #FF1177, 0 0 150px #FF1177;
+  	}
+  	to {
+    	text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #FF1177, 0 0 35px #FF1177, 0 0 40px #FF1177, 0 0 50px #FF1177, 0 0 75px #FF1177;
+  	}
+	}
+	@keyframes neon1 {
+  	from {
+    	text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #FF1177, 0 0 70px #FF1177, 0 0 80px #FF1177, 0 0 100px #FF1177, 0 0 150px #FF1177;
+  	}
+  	to {
+    	text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #FF1177, 0 0 35px #FF1177, 0 0 40px #FF1177, 0 0 50px #FF1177, 0 0 75px #FF1177;
+  	}
+	}
+@media only screen and (min-width: 961px) {
+	p{
+		font-size:10em;
+	}
+}
+/*address*/
+@media screen and (min-width: 320px){
+	.address h1{
+		font-size: 1.1em;
+		text-align: center;
+		color: #000;
+		font-family: 'PT Serif', serif;
+	}
+	.address p{
+		font-size: 1em;
+		text-align: center;
+		color: #000;
+		font-family: 'PT Sans Narrow', sans-serif;
+	}
+}
+@media only screen and (min-width: 961px){
+	.address h1{
+		font-size: 1.8em;
+	}
+	.address p{
+		font-size: 1.3em;
+	}
+	.address{
+		margin-top: 10em;
+	}
+}
+/*contact*/
+@media screen and (min-width: 320px){
+	.contact h2{
+		font-size: 1.1em;
+		text-align: center;
+		color: #000;
+		font-family: 'PT Serif', serif;
+	}
+	.contact p{
+		font-size: 1em;
+		text-align: center;
+		color: #000;
+		font-family: 'PT Sans Narrow', sans-serif;
+	}
+	.contact{
+		margin-top: 6.5em;
+	}
+}
+@media only screen and (min-width: 961px){
+	.contact h2{
+		font-size: 1.8em;
+	}
+	.contact p{
+		font-size: 1.3em;
+	}
+	.contact{
+		margin-top: 11em;
+	}
+}
+/*admission*/
+@media screen and (min-width: 320px){
+	.admission h3{
+		font-size: 1.1em;
+		text-align: center;
+		color: #000;
+		font-family: 'PT Serif', serif;
+	}
+	.admission p{
+		font-size: 1em;
+		text-align: center;
+		color: #000;
+		font-family: 'PT Sans Narrow', sans-serif;
+	}
+	.admission{
+		margin-top: 1em;
+	}
+}
+@media only screen and (min-width: 961px){
+	.admission h3{
+		font-size: 1.8em;
+	}
+	.admission p{
+		font-size: 1.3em;
+	}
+	.admission{
+		margin-top: 11em;
+	}
+}
+
+/*map*/
+@media screen and (min-width: 320px){
+	iframe{
+		width: 100%;
+		height: "200";
+		margin-top: 4em;
+	}
+}
+@media only screen and (min-width: 961px){
+	iframe{
+		width: 70%;
+		height: "600";
+		text-align: center;
+	}
+}
+/*footer*/
+@media screen and (min-width: 320px){
+	footer{
+		color: #fff;
+		background-color: #000;
+		margin-top: 4em;
+	}
+	footer p{
+		font-size: 1em;
+		padding: .1em;
+	}
+	.pa{
+		margin-top: -1.3em;
+	}
+	.i{
+		margin-top: 10em;
+	}
+}
+@media only screen and (min-width: 961px){
+	.i{
+		margin-top: 50em;
+	}
+}
+
+
+
+/*****************/
+/***nowshowing******/
+/*****************/
+/*background*/
+	body.nowplaying{
+		background-image: url("../img/marble.jpg");
+		padding: 1em;
+	}
+/*nowshowing*/
+@media screen and (min-width: 320px){
+	.now img{
+		width: 50%;
+	}
+}
+@media only screen and (min-width: 961px){
+	.now img{
+		width: 25%;
+	}
+}
+/*wonder*/
+@media screen and (min-width: 320px){
+	.moviet h2{
+		font-size: 2em;
+		color: #000;
+		font-family: 'PT Serif', serif;
+	}
+	.moviet p{
+		font-size: 1.2em;
+		text-align: left;
+		color: #000;
+		font-family: 'PT Sans Narrow', sans-serif;
+	}
+	button {
+		text-align: center;
+		text-decoration: none;
+		display: block;
+		margin: 2em auto;
+		padding: 1em;	
+		width: 135px;
+		background-color: #fff;
+		color: #000;
+		border: 1px solid #eee;
+		border-radius: 5px;
+		cursor: pointer;
+		transition: all .5s;
+	}
+	button:hover {
+		background-color: #000;
+		color: #FF1177;
+	}
+}
+@media only screen and (min-width: 961px){
+	.moviet h2{
+		font-size: 2.5em;
+	}
+	.moviet img{
+		float: left;
+		height: 25em;
+		padding: 1em;
+	}
+	.moviet p{
+		font-size: 1.5em;
+	}
+	.wrapper {
+		max-width: 960px;
+		margin: 0 auto;
+		padding: 0 50px;
+	}
+	button {
+		text-align: center;
+		text-decoration: none;
+		display: block;
+		margin: 2em auto;
+		padding: 1em;	
+		width: 135px;
+		background-color: #fff;
+		color: #000;
+		border: 1px solid #eee;
+		border-radius: 5px;
+		cursor: pointer;
+		transition: all .5s;
+		float: left;
+	}
+	button:hover {
+		background-color: #000;
+		color: #FF1177;
+	}
+	.ww{
+		margin-top: 6em;
+	}
+}
+/*spiderman*/
+@media screen and (min-width: 320px){
+	.moviet h3{
+		font-size: 2em;
+		color: #000;
+		font-family: 'PT Serif', serif;
+	}
+	.moviet p{
+		font-size: 1.2em;
+		text-align: left;
+		color: #000;
+		font-family: 'PT Sans Narrow', sans-serif;
+	}
+}
+@media only screen and (min-width: 961px){
+	.moviet h3{
+		font-size: 2.5em;
+		margin-top: 5em;
+	}
+	.moviet img{
+		float: left;
+		height: 25em;
+		padding: 1em;
+	}
+	.moviet p{
+		font-size: 1.5em;
+	}
+	.wrapper {
+		max-width: 960px;
+		margin: 0 auto;
+		padding: 0 50px;
+	}
+	button {
+		text-align: center;
+		text-decoration: none;
+		display: block;
+		margin: 2em auto;
+		padding: 1em;	
+		width: 135px;
+		background-color: #fff;
+		color: #000;
+		border: 1px solid #eee;
+		border-radius: 5px;
+		cursor: pointer;
+		transition: all .5s;
+		float: left;
+	}
+	button:hover {
+		background-color: #000;
+		color: #FF1177;
+	}
+	.sh{
+		margin-top: 6em;
+	}
+}
+/*guardians*/
+@media screen and (min-width: 320px){
+	.moviet h4{
+		font-size: 2em;
+		color: #000;
+		font-family: 'PT Serif', serif;
+	}
+	.moviet p{
+		font-size: 1.2em;
+		text-align: left;
+		color: #000;
+		font-family: 'PT Sans Narrow', sans-serif;
+	}
+}
+@media only screen and (min-width: 961px){
+	.moviet h4{
+		font-size: 2.5em;
+		margin-top: 5em;
+	}
+	.moviet img{
+		float: left;
+		height: 25em;
+		padding: 1em;
+	}
+	.moviet p{
+		font-size: 1.5em;
+	}
+	.wrapper {
+		max-width: 960px;
+		margin: 0 auto;
+		padding: 0 50px;
+	}
+	button {
+		text-align: center;
+		text-decoration: none;
+		display: block;
+		margin: 2em auto;
+		padding: 1em;	
+		width: 135px;
+		background-color: #fff;
+		color: #000;
+		border: 1px solid #eee;
+		border-radius: 5px;
+		cursor: pointer;
+		transition: all .5s;
+		float: left;
+	}
+	button:hover {
+		background-color: #000;
+		color: #FF1177;
+	}
+	.gotgv2{
+		margin-top: 9em;
+	}
+}
+/*captain*/
+@media screen and (min-width: 320px){
+	.moviet h5{
+		font-size: 2em;
+		color: #000;
+		font-family: 'PT Serif', serif;
+	}
+	.moviet p{
+		font-size: 1.2em;
+		text-align: left;
+		color: #000;
+		font-family: 'PT Sans Narrow', sans-serif;
+	}
+}
+@media only screen and (min-width: 961px){
+	.moviet h5{
+		font-size: 2.5em;
+		margin-top: 5em;
+	}
+	.moviet img{
+		float: left;
+		height: 25em;
+		padding: 1em;
+	}
+	.moviet p{
+		font-size: 1.5em;
+	}
+	.wrapper {
+		max-width: 960px;
+		margin: 0 auto;
+		padding: 0 50px;
+	}
+	button {
+		text-align: center;
+		text-decoration: none;
+		display: block;
+		margin: 2em auto;
+		padding: 1em;	
+		width: 135px;
+		background-color: #fff;
+		color: #000;
+		border: 1px solid #eee;
+		border-radius: 5px;
+		cursor: pointer;
+		transition: all .5s;
+		float: left;
+	}
+	button:hover {
+		background-color: #000;
+		color: #FF1177;
+	}
+	.cacw{
+		margin-top: 10em;
+	}
+}
+/*avengers*/
+@media screen and (min-width: 320px){
+	.moviet h6{
+		font-size: 2em;
+		color: #000;
+		font-family: 'PT Serif', serif;
+	}
+	.moviet p{
+		font-size: 1.2em;
+		text-align: left;
+		color: #000;
+		font-family: 'PT Sans Narrow', sans-serif;
+	}
+}
+@media only screen and (min-width: 961px){
+	.moviet h6{
+		font-size: 2.5em;
+		margin-top: 4em;
+	}
+	.moviet img{
+		float: left;
+		height: 25em;
+		padding: 1em;
+		margin-top: -4em;
+	}
+	.moviet p{
+		font-size: 1.5em;
+	}
+	.wrapper {
+		max-width: 960px;
+		margin: 0 auto;
+		padding: 0 50px;
+	}
+	button {
+		text-align: center;
+		text-decoration: none;
+		display: block;
+		margin: 2em auto;
+		padding: 1em;	
+		width: 135px;
+		background-color: #fff;
+		color: #000;
+		border: 1px solid #eee;
+		border-radius: 5px;
+		cursor: pointer;
+		transition: all .5s;
+		float: left;
+	}
+	button:hover {
+		background-color: #000;
+		color: #FF1177;
+	}
+	.ta{
+		margin-top: 12em;
+	}
+	.n{
+		margin-top: 10em;
+	}
+}
+
+
+
+/****************/
+/*****comingsoon*********/
+/****************/
+/*background*/
+	body.comingsoon{
+		background-image: url("../img/marble.jpg");
+		padding: 1em;
+	}
+/*comingsoon*/
+@media screen and (min-width: 320px){
+	.c h1{
+		color: #000;
+		font-size: 2em;
+		text-align: center;
+		margin-top: -3em;
+	}
+}
+@media only screen and (min-width: 961px){
+	.c h1{
+		font-size: 3em;
+		margin-top: 5em;
+	}
+}
+/*justice*/
+@media screen and (min-width: 320px){
+	.comings h2{
+		font-size: 2em;
+		color: #000;
+		font-family: 'PT Serif', serif;
+		margin-top: 3em;
+	}
+	.comings p{
+		font-size: 1.2em;
+		text-align: left;
+		color: #000;
+		font-family: 'PT Sans Narrow', sans-serif;
+	}
+}
+@media only screen and (min-width: 961px){
+	.comings h2{
+		font-size: 2.5em;
+		margin-top: 5em;
+	}
+	.comings img{
+		float: left;
+		height: 25em;
+		padding: 1em;
+	}
+	.comings p{
+		font-size: 1.5em;
+	}
+	.wrapper {
+		max-width: 960px;
+		margin: 0 auto;
+		padding: 0 50px;
+	}
+	.j{
+		margin-top: 9em;
+	}
+}
+/*deadpool*/
+@media screen and (min-width: 320px){
+	.comings h3{
+		font-size: 2em;
+		color: #000;
+		font-family: 'PT Serif', serif;
+	}
+	.comings p{
+		font-size: 1.2em;
+		text-align: left;
+		color: #000;
+		font-family: 'PT Sans Narrow', sans-serif;
+	}
+}
+@media only screen and (min-width: 961px){
+	.comings h3{
+		font-size: 2.5em;
+		margin-top: 7em;
+	}
+	.comings img{
+		float: left;
+		height: 25em;
+		padding: 1em;
+	}
+	.comings p{
+		font-size: 1.5em;
+	}
+	.wrapper {
+		max-width: 960px;
+		margin: 0 auto;
+		padding: 0 50px;
+	}
+	.dead{
+		margin-top: 9em;
+	}
+}
+/*aquaman*/
+@media screen and (min-width: 320px){
+	.comings h4{
+		font-size: 2em;
+		color: #000;
+		font-family: 'PT Serif', serif;
+	}
+	.comings p{
+		font-size: 1.2em;
+		text-align: left;
+		color: #000;
+		font-family: 'PT Sans Narrow', sans-serif;
+	}
+}
+@media only screen and (min-width: 961px){
+	.comings h4{
+		font-size: 2.5em;
+		margin-top: 5em;
+	}
+	.comings img{
+		float: left;
+		height: 25em;
+		padding: 1em;
+		margin-top: -2em;
+	}
+	.comings p{
+		font-size: 1.5em;
+	}
+	.wrapper {
+		max-width: 960px;
+		margin: 0 auto;
+		padding: 0 50px;
+	}
+	.man{
+		margin-top: 9em;
+	}
+}
+/*antman*/
+@media screen and (min-width: 320px){
+	.comings h5{
+		font-size: 2em;
+		color: #000;
+		font-family: 'PT Serif', serif;
+	}
+	.comings p{
+		font-size: 1.2em;
+		text-align: left;
+		color: #000;
+		font-family: 'PT Sans Narrow', sans-serif;
+	}
+}
+@media only screen and (min-width: 961px){
+	.comings h5{
+		font-size: 2.5em;
+		margin-top: 7em;
+	}
+	.comings img{
+		float: left;
+		height: 25em;
+		padding: 1em;
+	}
+	.comings p{
+		font-size: 1.5em;
+	}
+	.wrapper {
+		max-width: 960px;
+		margin: 0 auto;
+		padding: 0 50px;
+	}
+	.w{
+		margin-top: 11em;
+	}
+}
+/*avengersinfinity*/
+@media screen and (min-width: 320px){
+	.comings h6{
+		font-size: 2em;
+		color: #000;
+		font-family: 'PT Serif', serif;
+	}
+	.comings p{
+		font-size: 1.2em;
+		text-align: left;
+		color: #000;
+		font-family: 'PT Sans Narrow', sans-serif;
+	}
+}
+@media only screen and (min-width: 961px){
+	.comings h6{
+		font-size: 2.5em;
+		margin-top: 7em;
+	}
+	.comings img{
+		float: left;
+		height: 25em;
+		padding: 1em;
+	}
+	.comings p{
+		font-size: 1.5em;
+	}
+	.wrapper {
+		max-width: 960px;
+		margin: 0 auto;
+		padding: 0 50px;
+	}
+	.a{
+		margin-top: 12em;
+	}
+}
+	.c{
+		margin-top: 14em;
+	}
+
+
+
+/****************/
+/***specialevents******/
+/****************/
+/*background*/
+	body.specialevents{
+		background-color: #222222;
+		background: repeating-linear-gradient(45deg,#2b2b2b 0%, #2b2b2b 10%, #222222 0%, #222222 50%) 0 / 15px 15px;
+		padding: 1em;
+	}
+/*specialevents*/
+@media screen and (min-width: 320px){
+	.se h1{
+		font-size: 2em;
+		text-align: center;
+		color: #fff;
+		margin-top: 3em;
+	}
+}
+@media only screen and (min-width: 961px){
+	.se h1{
+		font-size: 3em;
+		text-align: center;
+	}
+}
+/*solo*/
+@media screen and (min-width: 320px){	
+	.special h2{
+		font-size: 2em;
+		color: #fff;
+		font-family: 'PT Serif', serif;
+	}
+	.special li{
+		display: inline-block;
+	}
+	.special p{
+		font-size: 1.2em;
+		text-align: left;
+		color: #fff;
+		font-family: 'PT Sans Narrow', sans-serif;
+	}
+	iframe{
+		width: 100%;
+		height: "200";
+	}
+}
+@media only screen and (min-width: 961px){
+	.special h2{
+		font-size: 2.5em;
+		color: #fff;
+		font-family: 'PT Serif', serif;
+		margin-top: 7em;
+	}
+	.special img{
+		float: left;
+		height: 25em;
+		padding: 1em;
+	}
+	.special li{
+		display: none
+	}
+	.special p{
+		font-size: 1.5em;
+		text-align: left;
+		color: #fff;
+		font-family: 'PT Sans Narrow', sans-serif;
+	}
+	.wrapper {
+		max-width: 960px;
+		margin: 0 auto;
+		padding: 0 50px;
+	}
+	iframe{
+		width: 30%;
+		height:"200";
+		float: center;
+		margin: .5em;
+	}
+}
+/*black*/
+@media screen and (min-width: 320px){	
+	.special{
+		margin-top{
+
+		}
+	}
+	.special h3{
+		font-size: 2em;
+		color: #fff;
+		font-family: 'PT Serif', serif;
+	}
+	.special li{
+		display: inline-block;
+	}
+	.special p{
+		font-size: 1.2em;
+		text-align: left;
+		color: #fff;
+		font-family: 'PT Sans Narrow', sans-serif;
+	}
+	.sp{
+		margin-top: -10em;}
+	iframe{
+		width: 100%;
+		height: "200";
+	}
+}
+@media only screen and (min-width: 961px){
+	.special h3{
+		font-size: 2.5em;
+		color: #fff;
+		font-family: 'PT Serif', serif;
+		margin-top: 7em;
+	}
+	.special img{
+		float: left;
+		height: 25em;
+		padding: 1em;
+	}
+	.special li{
+		display: none
+	}
+	.special p{
+		font-size: 1.5em;
+		text-align: left;
+		color: #fff;
+		font-family: 'PT Sans Narrow', sans-serif;
+	}
+	.wrapper {
+		max-width: 960px;
+		margin: 0 auto;
+		padding: 0 50px;
+	}
+	iframe{
+		width: 30%;
+		height:"200";
+		float: center;
+		margin: .5em;
+	}
+	.s{
+		margin-top: 3em;
+	}
+}
+
+
